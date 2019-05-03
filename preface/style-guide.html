@@ -1,0 +1,669 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Style Guide - Tari Labs University</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A collection of learning resources for cryptocurrency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Twitter tags -->
+        <meta name="twitter:title" content="Style Guide - Tari Labs University" />
+        <meta name="twitter:site" content="Style Guide - Tari Labs University"/>
+        <meta name="twitter:description" content="A collection of learning resources for cryptocurrency" />
+        <meta name="twitter:image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png" />
+        <meta name="twitter:card" content="summary"/>
+
+        <!-- Facebook tags -->
+        <meta property="og:title" content="Style Guide - Tari Labs University" />
+        <meta property="og:site_name" content="Style Guide - Tari Labs University"/>
+        <meta property="og:image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png" />
+        <meta property="og:description" content="A collection of learning resources for cryptocurrency" />
+
+        <!-- Generic tags -->
+        <meta itemprop="thumbnailUrl" content="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+        <meta itemprop="image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+        <link rel="image_src" href="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+            }
+          });
+        </script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <img src="../theme/images/tlu.png" class="tlu">
+
+            <ol class="chapter"><li class="affix"><a href="../preface/introduction.html">Introduction</a></li><li><a href="../cryptography/cryptography.html"><strong aria-hidden="true">1.</strong> Cryptography</a></li><li><ol class="section"><li><a href="../cryptography/crypto-1/sources/PITCHME.link.html"><strong aria-hidden="true">1.1.</strong> Elliptic Curves 101</a></li><li><a href="../cryptography/digital_signatures/introduction_schnorr_signatures.html"><strong aria-hidden="true">1.2.</strong> Introduction to Schnorr Signatures</a></li><li><a href="../cryptography/scriptless-scripts/introduction-to-scriptless-scripts.html"><strong aria-hidden="true">1.3.</strong> Introduction to Scriptless Scripts</a></li><li><a href="../cryptography/musig-schnorr-sig-scheme/The_MuSig_Schnorr_Signature_Scheme.html"><strong aria-hidden="true">1.4.</strong> The MuSig Schnorr Signature Scheme</a></li><li><a href="../cryptography/fraud-proofs-1/MainReport.html"><strong aria-hidden="true">1.5.</strong> Fraud Proofs</a></li><li><a href="../cryptography/bulletproofs-and-mimblewimble/MainReport.html"><strong aria-hidden="true">1.6.</strong> Bulletproofs and Mimblewimble</a></li><li><a href="../cryptography/building-on-bulletproofs/link.html"><strong aria-hidden="true">1.7.</strong> Building on Bulletproofs</a></li><li><a href="../cryptography/bulletproofs-protocols/MainReport.html"><strong aria-hidden="true">1.8.</strong> The Bulletproof Protocols</a></li><li><a href="../cryptography/pure-rust-ecc/pure-rust-ecc.html"><strong aria-hidden="true">1.9.</strong> Pure-Rust Elliptic Curve Cryptography</a></li></ol></li><li><a href="../consensus-mechanisms/consensus-mechanisms.html"><strong aria-hidden="true">2.</strong> Consensus Mechanisms</a></li><li><ol class="section"><li><a href="../consensus-mechanisms/BFT-consensusmechanisms/sources/PITCHME.link.html"><strong aria-hidden="true">2.1.</strong> BFT Consensus Mechanisms</a></li><li><a href="../consensus-mechanisms/BFT-consensus-mechanisms-applications/MainReport.html"><strong aria-hidden="true">2.2.</strong> Introduction to Applications of Byzantine Consensus Mechanisms</a></li></ol></li><li><a href="../layer2scaling/layer2scaling.html"><strong aria-hidden="true">3.</strong> Layer 2 Scaling</a></li><li><ol class="section"><li><a href="../layer2scaling/layer2scaling-landscape/layer2scaling-survey.html"><strong aria-hidden="true">3.1.</strong> Layer 2 Scaling Survey (part 1)</a></li><li><a href="../layer2scaling/more-landscape/landscape-update.html"><strong aria-hidden="true">3.2.</strong> Layer 2 Scaling Survey (part 2)</a></li><li><a href="../layer2scaling/executive-summary/sources/PITCHME.link.html"><strong aria-hidden="true">3.3.</strong> Layer 2 Scaling Survey Executive Summary</a></li></ol></li><li><a href="../merged-mining/merged-mining.html"><strong aria-hidden="true">4.</strong> Merged Mining</a></li><li><ol class="section"><li><a href="../merged-mining/merged-mining-scene/MergedMiningIntroduction.html"><strong aria-hidden="true">4.1.</strong> Merged Mining Introduction</a></li></ol></li><li><a href="../digital-assets/digital-assets.html"><strong aria-hidden="true">5.</strong> Digital Assets</a></li><li><ol class="section"><li><a href="../digital-assets/howey-application-to-blockchain/MainReport.html"><strong aria-hidden="true">5.1.</strong> Application of Howey to Blockchain Network Token Sales</a></li><li><a href="../digital-assets/nft-landscape-1/sources/PITCHME.link.html"><strong aria-hidden="true">5.2.</strong> Non-fungible Tokens Survey</a></li><li><a href="../digital-assets/confidential-assets/MainReport.html"><strong aria-hidden="true">5.3.</strong> Confidential Assets</a></li></ol></li><li><a href="../protocols/protocols.html"><strong aria-hidden="true">6.</strong> Protocols</a></li><li><ol class="section"><li><a href="../protocols/mimblewimble-1/sources/PITCHME.link.html"><strong aria-hidden="true">6.1.</strong> Mimblewimble Transactions (presentation)</a></li><li><a href="../protocols/mimblewimble-1/MainReport.html"><strong aria-hidden="true">6.2.</strong> Tari Transactions - A simple explanation</a></li><li><a href="../protocols/grin-protocol-overview/MainReport.html"><strong aria-hidden="true">6.3.</strong> Mimblewimble-Grin Block Chain Protocol Overview</a></li><li><a href="../protocols/grin-beam-comparison/MainReport.html"><strong aria-hidden="true">6.4.</strong> Grin vs. BEAM; a Comparison</a></li><li><a href="../protocols/grin-design-choice-criticisms/MainReport.html"><strong aria-hidden="true">6.5.</strong> Grin Design Choice Criticisms - Truth or Fiction</a></li><li><a href="../protocols/atomic-swaps/AtomicSwaps.html"><strong aria-hidden="true">6.6.</strong> Atomic Swaps</a></li><li><a href="../protocols/lightning-network-for-dummies/sources/PITCHME.link.html"><strong aria-hidden="true">6.7.</strong> Lightning Network for Dummies</a></li><li><a href="../protocols/merkle-trees-and-spv-1/sources/PITCHME.link.html"><strong aria-hidden="true">6.8.</strong> Introduction to SPV, Merkle Trees and Bloom Filters</a></li><li><a href="../protocols/rgb-introduction/sources/PITCHME.link.html"><strong aria-hidden="true">6.9.</strong> The RGB Protocol - An Introduction</a></li><li><a href="../protocols/dht/MainReport.html"><strong aria-hidden="true">6.10.</strong> Distributed Hash Tables</a></li></ol></li><li><a href="../labs/introduction.html"><strong aria-hidden="true">7.</strong> Labs</a></li><li><ol class="section"><li><a href="../labs/mermaid-demo.html"><strong aria-hidden="true">7.1.</strong> Mermaid Demonstration</a></li><li><a href="../labs/notes.html"><strong aria-hidden="true">7.2.</strong> Notes and info boxes</a></li></ol></li><li><a href="../preface/style-guide.html" class="active"><strong aria-hidden="true">8.</strong> Style Guide</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">
+<svg width="23px" height="23px" viewBox="0 0 23 23 version="1.1" class="gem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,6.12859037 L0,12.5315952 L9.50941704,23 L23,12.5722492 L23,6.12859037 L9.56098655,0 L0,6.12859037 Z M8.37488789,18.3349536 L2.3103139,11.6575342 L2.3103139,8.02916483 L8.37488789,9.56385329 L8.37488789,18.3349536 Z M10.6748879,19.2090146 L10.6748879,10.1533363 L19.4932735,12.3893062 L10.6748879,19.2090146 Z M20.7,7.57180734 L20.7,10.3464428 L4.17713004,6.15908087 L9.74663677,2.58152894 L20.7,7.57180734 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg></h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#style-guide" id="style-guide"><h1>Style Guide</h1></a>
+<ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#standards-for-content">Standards for Content</a>
+<ul>
+<li><a href="#spelling">Spelling</a></li>
+<li><a href="#quotation-marks">Quotation Marks</a></li>
+<li><a href="#punctuation">Punctuation</a></li>
+<li><a href="#units-of-measure">Units of Measure</a></li>
+<li><a href="#date-and-time">Date and Time</a></li>
+<li><a href="#abbreviations">Abbreviations</a></li>
+<li><a href="#spacing">Spacing</a></li>
+<li><a href="#decimals-and-numbers">Decimals and Numbers</a></li>
+<li><a href="#list-types">List Types</a></li>
+<li><a href="#list-punctuation">List Punctuation</a></li>
+<li><a href="#cross-referencing">Cross-referencing</a></li>
+<li><a href="#case-formatting">Case Formatting</a></li>
+<li><a href="#terminology">Terminology</a></li>
+</ul>
+</li>
+<li><a href="#standards-for-layout">Standards for Layout</a>
+<ul>
+<li><a href="#proposed-layout">Proposed Layout</a></li>
+<li><a href="#line-widths">Line Widths</a></li>
+<li><a href="#bulleted-list-of-contents">Bulleted List of Contents</a></li>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#figures-and-tables">Figures and Tables</a></li>
+<li><a href="#equations">Equations</a></li>
+<li><a href="#referencing-of-source-material">Referencing of Source Material</a>
+<ul>
+<li><a href="#referencing-standard">Referencing Standard</a></li>
+<li><a href="#markdown-links">Markdown Links</a></li>
+</ul>
+</li>
+<li><a href="#list-of-contributors">List of Contributors</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+<li><a href="#appendices">Appendices</a>
+<ul>
+<li><a href="#appendix-a-lower-case-words-used-in-title-case-formatting">Appendix A: Lower-case Words used in Title Case Formatting</a></li>
+<li><a href="#appendix-b-tari-labs-university-terminology-conventions">Appendix B: Tari Labs University Terminology Conventions</a></li>
+</ul>
+</li>
+<li><a href="#contributors">Contributors</a></li>
+</ul>
+<a class="header" href="#purpose" id="purpose"><h2>Purpose</h2></a>
+<p>The purpose of this Style Guide is to provide contributors to the Tari Labs University (TLU) reports with standards for
+content and layout. The intention is to improve communication and provide a high-quality learning resource for users.
+Use of this Style Guide can assist in ensuring consistency in the content and layout of TLU reports.</p>
+<p>TLU content is created in <a href="https://www.markdownguide.org/">Markdown</a> format and is rendered using
+<a href="https://github.com/rust-lang-nursery/mdBook">mdBook</a>.</p>
+<a class="header" href="#standards-for-content" id="standards-for-content"><h2>Standards for Content</h2></a>
+<a class="header" href="#spelling" id="spelling"><h3>Spelling</h3></a>
+<p>As per the United States (US) spelling standard. The applicable dictionary is Merriam-Webster Online [<a href="https://www.merriam-webster.com" title="Merriam-Webster Online Dictionary">1</a>].</p>
+<a class="header" href="#quotation-marks" id="quotation-marks"><h3>Quotation Marks</h3></a>
+<p>As per the American style. Use double quotation marks for a first quotation and single quotation marks for a quotation
+within a quotation.</p>
+<a class="header" href="#punctuation" id="punctuation"><h3>Punctuation</h3></a>
+<p>As per the United Kingdom (UK) punctuation standard. Place commas and full stops outside the closing quotation marks as
+advised in [<a href="http://www.eng-lang.co.uk/ogs.htm" title="The Oxford Guide to Style">4</a>].</p>
+<a class="header" href="#units-of-measure" id="units-of-measure"><h3>Units of Measure</h3></a>
+<p>Use the internationally agreed ISO standards [<a href="https://physics.nist.gov/cuu/pdf/sp811.pdf" title="Guide for the Use of the International System of Units (SI)">3</a>] for expressing units of measure.</p>
+<p><em>Example</em></p>
+<p>min = minute, s = second, h = hour, g = gram.</p>
+<a class="header" href="#date-and-time" id="date-and-time"><h3>Date and Time</h3></a>
+<ul>
+<li>Date format: yyyy-mm-dd (year-month-date).</li>
+<li>Date format when written in text: &quot;The document was submitted for approval on 10 March 2019&quot;.</li>
+<li>Time format (international): 11:00; 15:00.</li>
+</ul>
+<a class="header" href="#abbreviations" id="abbreviations"><h3>Abbreviations</h3></a>
+<ul>
+<li>
+<p>If it is necessary to use abbreviations in a report, write the abbreviation out in full at its first occurrence in
+the text, followed by the abbreviation in brackets. Thereafter, use the abbreviation only.</p>
+<p><em>Example</em></p>
+<p>Tari Labs University (TLU), graphical user interface (GUI).</p>
+</li>
+<li>
+<p>Abbreviations of units should be consistent and not changed in the plural.</p>
+<p><em>Example</em></p>
+<p>10h and not 10hrs; 5min and not 5mins.</p>
+</li>
+</ul>
+<a class="header" href="#spacing" id="spacing"><h3>Spacing</h3></a>
+<p><strong>Note:</strong> Due to limitations in Markdown, we deviate from the ISO convention, which requires a space between numbers
+and units of measure, and also as a thousands separator.</p>
+<ul>
+<li>
+<p>Use of a non-breaking space (<code>&amp;nbsp;</code>) can improve readability in the rendered mdbook where required.</p>
+</li>
+<li>
+<p>Indicate clearly to which unit a number belongs:</p>
+<p><em>Incorrect</em></p>
+<p>11 x 11 x 11mm</p>
+<p><em>Correct</em></p>
+<p>11mm x 11mm x 11mm</p>
+</li>
+<li>
+<p>Use 'to' rather than a dash to indicate a range of values:</p>
+<p><em>Incorrect</em>
+1 - 10cm</p>
+<p><em>Correct</em></p>
+<p>1cm to 10cm</p>
+</li>
+<li>
+<p>Use a comma to indicate thousands.</p>
+<p><em>Example</em></p>
+<p>1,000; 20,000,000; 250,000.</p>
+</li>
+</ul>
+<p>Mathematical operators should usually be wrapped inside <a href="#equations">equation tags</a>. In plain text, leave a space on
+either side of signs such as + (plus), - (minus), = (equal to), &gt; (greater than) and &lt; (less than).</p>
+<a class="header" href="#decimals-and-numbers" id="decimals-and-numbers"><h3>Decimals and Numbers</h3></a>
+<ul>
+<li>Use the decimal point and not the decimal comma.</li>
+<li>Write out numbers from one to nine in full in text; use Arabic numerals for 10 onwards.</li>
+</ul>
+<a class="header" href="#list-types" id="list-types"><h3>List Types</h3></a>
+<p>TLU uses unordered lists (refer to the first example under <a href="#list-punctuation">List Punctuation</a>) and ordered lists
+(refer to the second example under <a href="#list-punctuation">List Punctuation</a>.</p>
+<a class="header" href="#list-punctuation" id="list-punctuation"><h3>List Punctuation</h3></a>
+<p>Where a list is a continuation of the preceding text, which is followed by a colon, use a semicolon between each
+bullet point and end the list with a full stop.</p>
+<p><em>Example</em></p>
+<p>Their primary motivations for selecting a static emission rate are:</p>
+<ul>
+<li>there will be no upper limit on the amount of coins that can be created;</li>
+<li>the percentage of newly created coins compared to the total coins in circulation will tend toward zero;</li>
+<li>it will mitigate the effect of orphaned and lost coins;</li>
+<li>it will encourage spending rather than holding of coins.</li>
+</ul>
+<p>Where a list contains complete sentences, each item in the list is followed by a full stop.</p>
+<p><em>Example</em></p>
+<p>According to the proposed solution, one of three conditions will be true to the SPV client when using erasure codes:</p>
+<ol>
+<li>The entire extended data is available, the erasure code is constructed correctly and the block is valid.</li>
+<li>The entire extended data is available, the erasure code is constructed correctly, but the block is invalid.</li>
+<li>The entire extended data is available, but the erasure code is constructed incorrectly.</li>
+</ol>
+<p>Where a list is not a sentence and does not complete a preceding part of a sentence, use no punctuation.</p>
+<p><em>Example</em></p>
+<p>Refer to the list of contents at the start of this Style Guide.</p>
+<a class="header" href="#cross-referencing" id="cross-referencing"><h3>Cross-referencing</h3></a>
+<ul>
+<li>Insert cross-references between the referenced information in the text and the list of references.</li>
+<li>Text references appear in square brackets in the text and are listed under &quot;References&quot; at the end of each chapter.</li>
+<li>If a text reference appears at the end of a paragraph, it appears after the full stop at the end of the paragraph.</li>
+<li>Please be specific when referring to figures, tables and sections of text. For clarity, if using figure and table
+numbering, avoid referring to &quot;below&quot; or &quot;above&quot;. Rather give a specific figure or table number. In the case of text
+references, include a link. For more information, please refer to the <a href="#markdown-links">Markdown Links</a> section in this
+Style Guide.</li>
+</ul>
+<a class="header" href="#case-formatting" id="case-formatting"><h3>Case Formatting</h3></a>
+<p><a href="#appendix-a-lower-case-words-used-in-title-case-formatting">Appendix A</a> contains a list of lower-case words used in
+title case formatting in headings and captions (if used).</p>
+<a class="header" href="#terminology" id="terminology"><h3>Terminology</h3></a>
+<p>With new concepts being formed daily and words changing over time, it is useful to establish terminology conventions. Different conventions (upper-case, lower-case, one word, two words, etc.) are used by different sources. <a href="#appendix-b-tari-labs-university-terminology-conventions">Appendix B</a> contains suggested terminology for use in TLU reports.</p>
+<a class="header" href="#standards-for-layout" id="standards-for-layout"><h2>Standards for Layout</h2></a>
+<a class="header" href="#proposed-layout" id="proposed-layout"><h3>Proposed Layout</h3></a>
+<p>This section gives the proposed layout for TLU reports. The following headings are provided as a guide to heading
+levels and content:</p>
+<ul>
+<li><strong>Title (as heading level 1)</strong>
+Contents List (as embedded links).
+<ul>
+<li>
+<p><strong>Introduction/Purpose/Background/Overview (as heading level 2)</strong></p>
+<p>This section explains the aim of the report and prepares the reader for the content.</p>
+</li>
+<li>
+<p><strong>Other headings as appropriate (as heading level 2 and lower)</strong></p>
+<p>Structure the body of your report by using headings and subheadings. Ordering these headings logically helps you
+to present your information effectively. Headings make it easier for
+readers to find specific information.</p>
+<ul>
+<li>
+<p><strong>Numbered Lists:</strong> Use numbered lists when the order of the items in the list is important, such as in procedures.</p>
+</li>
+<li>
+<p><strong>Bulleted Lists:</strong> Use bulleted lists when the order of the items in the list is not important.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusions, Observations, Recommendations (as heading level 2)</strong></p>
+<p>The conclusion complements the purpose of the report. It concisely summarizes the findings of the report and
+gives a future strategy, if required.</p>
+</li>
+<li>
+<p><strong>References (as heading level 2)</strong></p>
+<p>References acknowledge the work of others and help readers to find sources. Refer to
+<a href="#referencing-of-source-material">Referencing of Source Material</a>.</p>
+</li>
+<li>
+<p><strong>Appendices (as heading level 2)</strong></p>
+<p>Appendices contain supplementary information that supports the main report.</p>
+<ul>
+<li>
+<p><strong>Appendix A: Name (as heading level 3)</strong></p>
+<p>Rather than inserting an entire supporting document into an appendix, provide a text reference and list the
+reference in the references section.</p>
+</li>
+<li>
+<p><strong>Appendix B: Name  (as heading level 3)</strong></p>
+<p>If figure and table numbers are used in the report, the figure and table numbering in the appendices follows on
+from the figure and table numbers used in the report.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Contributors (as heading level 2)</strong></p>
+<p>Refer to <a href="#list-of-contributors">List of Contributors</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#line-widths" id="line-widths"><h3>Line Widths</h3></a>
+<p>Try to keep line widths to a maximum of 120 characters for ease of GitHub reviews.
+In Markdown, a single line break does not constitute the start of a new paragraph.</p>
+<p><em>Example</em></p>
+<p>This text, which is split over four lines:</p>
+<p><code>Probatum fuit hujusmodi Testamentum apud London decimo Octavo die mensis Septembris Anno Domini Millesimo</code><br />
+<code>Septingentesimo vicesimo tertio Coram venerabili viro Gulielmo Strahan. In cuius rei testimonium sigillum nostrum</code><br />
+<code>presentibus apposuimus ad duos anni terminos videlicet ad festa Sancti Michaelis Archangeli et Annunciationis beate</code><br />
+<code>Marie virginis.</code></p>
+<p>will look like a single paragraph, as follows:</p>
+<p>Probatum fuit hujusmodi Testamentum apud London decimo Octavo die mensis Septembris Anno Domini Millesimo
+Septingentesimo vicesimo tertio Coram venerabili viro Gulielmo Strahan. In cuius rei testimonium sigillum nostrum
+presentibus apposuimus ad duos anni terminos videlicet ad festa Sancti Michaelis Archangeli et Annunciationis beate
+Marie virginis.</p>
+<a class="header" href="#bulleted-list-of-contents" id="bulleted-list-of-contents"><h3>Bulleted List of Contents</h3></a>
+<p>Every chapter in a TLU report should start with a bulleted list of all the headings in that chapter (with embedded
+links), for quick reference and consistency. This is optional for chapters that have five or fewer lower-level headings.</p>
+<p><em>Example</em></p>
+<p>Refer to the contents listed at the start of this <a href="#style-guide">Style Guide</a>. The heading &quot;Contents&quot; is not inserted
+before this list.</p>
+<a class="header" href="#headings" id="headings"><h3>Headings</h3></a>
+<ul>
+<li>Do not include paragraph numbers in headings.</li>
+<li>For consistency, upper and lower-case (title case) letters are used for headings at all levels.</li>
+</ul>
+<p><em>Incorrect</em></p>
+<p>## 2. OVERVIEW</p>
+<p><em>Correct</em></p>
+<p>## Overview</p>
+<p>Also refer to <a href="#appendix-a-lower-case-words-used-in-title-case-formatting">Appendix A</a>.</p>
+<a class="header" href="#figures-and-tables" id="figures-and-tables"><h3>Figures and Tables</h3></a>
+<p>The use of captions, as well as figure and table numbering, is optional. If you choose to use numbering and captions,
+these guidelines will help to promote consistency in TLU layout:</p>
+<ul>
+<li>Number figures and tables in each section sequentially, with the table caption above the table and the figure caption
+below the figure.</li>
+<li>Type figure and table captions in upper and lower-case (title case).</li>
+<li>Type Figure x: or Table X: before the caption, as applicable.</li>
+<li>Center figures and tables on the page.</li>
+<li>Place figures and tables as soon as possible after they are first referred to in the text. The text reference, if
+figure and table numbering is not used, would then be &quot;the following figure...&quot; or &quot;the following table...&quot;. This helps
+to avoid confusion.</li>
+</ul>
+<a class="header" href="#equations" id="equations"><h3>Equations</h3></a>
+<p>mdBook has optional support for math
+<a href="https://github.com/rust-lang-nursery/mdBook/blob/master/book-example/src/format/mathjax.md">equations</a>
+through MathJax. In addition to the delimiters <code>\[</code> and <code>\[</code>, TLU also supports delimiters <code>$</code> and <code>$$</code>.</p>
+<p><em>Examples</em></p>
+<ul>
+<li>
+<p>Example of an inline equation: $ h \in \mathbb G $</p>
+</li>
+<li>
+<p>Example of a display equation:</p>
+</li>
+</ul>
+<p>$$
+\mathbb s = \prod _{i=0}^n s(i)
+$$</p>
+<p><strong>Note:</strong> MathJax rendering in mdBook has some caveats to take note of:</p>
+<ul>
+<li>
+<p>Subscripts</p>
+<ul>
+<li>
+<p>When using two or more subscripts in inline or display equations, stipulated by a preceding underscore (<code>_</code>), the
+equation rendering does not work as expected. This is due to <code>_</code> being a special character for Markdown indicating
+text in italics. The way around this is to escape each underscore used in the equation as follows: (<code>\_</code>). An
+example of this is:</p>
+<ul>
+<li>
+<p><em>Rendering correctly</em></p>
+<p>$ \mathbf a _{[:l]} = ( a_1 , ... , a_n ) \in \mathbb F ^ n \mspace{12mu} \text{and}
+\mspace{12mu} \mathbf a _{[l:]} = ( a_{1+1} , ... , a_n ) \in \mathbb F ^ {n-l} $</p>
+<p>as</p>
+<p><code>$ \mathbf a \_{[:l]} = ( a_1 , ... , a_n ) \in \mathbb F ^ n \mspace{12mu} \text{and} \mspace{12mu} \mathbf a \_{[l:]} = ( a_{1+1} , ... , a_n ) \in \mathbb F ^ {n-l} $</code></p>
+</li>
+<li>
+<p><em>Rendering incorrectly</em></p>
+<p>$  \mathbf a _{[:l]} = ( a_1 , ... , a_n ) \in \mathbb F ^ n \mspace{12mu} \text{and} \mspace{12mu}<br />
+\mathbf a <em>{[l:]} = ( a</em>{1+1}  , ... , a_n ) \in \mathbb F ^ {n-l} $</p>
+<p>as</p>
+<p><code>$ \mathbf a _{[:l]} = ( a_1 , ... , a_n ) \in \mathbb F ^ n \mspace{12mu} \text{and} \mspace{12mu} \mathbf a _{[l:]} = ( a_{1+1} , ... , a_n ) \in \mathbb F ^ {n-l} $</code></p>
+<p>Notice that this part of the (failed) formula, <code>_{[l:]} = ( a_</code>, is rendered in italics.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Superscripts and subscripts order</p>
+<ul>
+<li>
+<p>Sometimes swapping the order in which an expression's superscript text and subscript text appear may fix
+rendering issues, for example:</p>
+<ul>
+<li>
+<p><code>$ s_i = \prod ^{\log _2 (n)} _{j=1} x ^{b(i,j)} _j $</code></p>
+<p>vs.</p>
+<p><code>$ s_i = \prod _{j=1} ^{\log _2 (n)} x _j ^{b(i,j)} $</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#referencing-of-source-material" id="referencing-of-source-material"><h3>Referencing of Source Material</h3></a>
+<a class="header" href="#referencing-standard" id="referencing-standard"><h4>Referencing Standard</h4></a>
+<p>TLU uses the IEEE standard [<a href="https://guides.lib.monash.edu/citing-referencing/ieee" title="Citing and Referencing: IEEE">2</a>] as a guide for referencing publications.</p>
+<p>List references in the following order, as applicable:</p>
+<ol>
+<li>Author(s) initials or first name and surname (note punctuation in the following example).</li>
+<li>Title of the report, between double quotation marks. If it is an online report, state this in square brackets, as
+shown in the following example.</li>
+<li>Title of journal, in italics (if applicable).</li>
+<li>Publication information (volume, number, etc.).</li>
+<li>Page range (if applicable).</li>
+<li>URL address if an online publication. Provide this information as shown in the following example: &quot;Available: ..&quot;.</li>
+<li>Date you accessed the article if it is an online publication (yyyy-mm-dd), as shown in the following example.</li>
+</ol>
+<p><em>Example</em></p>
+<p>[1] M. Abe, M. Ohkubo and K. Suzuki, &quot;1-out-of-n Signatures from a Variety of Keys&quot; [online].
+Available: https://www.iacr.org/cryptodb/archive/2002/ASIACRYPT/50/50.pdf. Date accessed: 2018-12-18.</p>
+<p>Please note the use of punctuation and full stops in the example.</p>
+<a class="header" href="#markdown-links" id="markdown-links"><h4>Markdown Links</h4></a>
+<p>There are two types of Markdown links: <strong>inline links</strong> and <strong>reference links</strong>.</p>
+<p>The <strong>inline link</strong> under the <a href="#Equations">Equations</a> heading was created as follows:</p>
+<ol>
+<li>Insert identifying link text within a set of square brackets (refer to the following example).</li>
+<li>Create an inline link by placing a set of parentheses (round brackets) immediately after the closing square bracket
+of the link text (refer to the following example).</li>
+<li>Insert the relevant URL link inside the parentheses (round brackets) (refer to the following example).</li>
+</ol>
+<p>mdBook has optional support for math
+<a href="https://github.com/rust-lang-nursery/mdBook/blob/master/book-example/src/format/mathjax.md">equations</a> through MathJax.</p>
+<p><em>Example</em></p>
+<p>A <strong>reference link</strong> has two parts. The first part of a reference link has two sets of square brackets. Inside the inner
+(second) set of square brackets, insert a label to identify the link.</p>
+<p><em>Example</em></p>
+<p>Under the heading <a href="#spelling">Spelling</a>, the text reference is &quot;The applicable dictionary is Merriam-Webster Online [<a href="https://www.merriam-webster.com" title="Merriam-Webster Online Dictionary">1</a>]&quot;.
+In the markdown text, note the double square brackets and the label 1. The rendered text shows <a href="https://www.merriam-webster.com" title="Merriam-Webster Online Dictionary">1</a>.</p>
+<p>The second part of a reference link is inserted under the heading <a href="#references">References</a>, and appears as follows:</p>
+<p>[<a href="https://www.merriam-webster.com" title="Merriam-Webster Online Dictionary">1</a>] Merriam-Webster Online Dictionary [online].
+Available: https://www.merriam-webster.com/. Date accessed: 2019-02-01.</p>
+<p>The full online reference is inserted after <code>[[1]]</code>; and the pop-up text link (which can be seen by hovering your cursor
+over the text reference in <a href="#spelling">Spelling</a>) is inserted after <code>[1]:</code>.</p>
+<p>For assistance with the layout of references, refer to <a href="#referencing-standard">Referencing Standard</a>.</p>
+<a class="header" href="#list-of-contributors" id="list-of-contributors"><h3>List of Contributors</h3></a>
+<p>The contributors are listed in a bulleted list via their GitHub account URLs. The author is listed first, followed by
+any reviewers or people who contributed via pull requests.
+Refer to <a href="#contributors">Contributors</a> for an example.</p>
+<a class="header" href="#references" id="references"><h2>References</h2></a>
+<p>[<a href="https://www.merriam-webster.com" title="Merriam-Webster Online Dictionary">1</a>] Merriam-Webster Online Dictionary [online].
+Available: https://www.merriam-webster.com/. Date accessed: 2019-02-01.</p>
+<p>[<a href="https://guides.lib.monash.edu/citing-referencing/ieee" title="Citing and Referencing: IEEE">2</a>] Citing and Referencing: IEEE [online].
+Available: https://guides.lib.monash.edu/citing-referencing/ieee. Date accessed: 2019-02-01.</p>
+<p>[<a href="https://physics.nist.gov/cuu/pdf/sp811.pdf" title="Guide for the Use of the International System of Units (SI)">3</a>] A. Thompson and B. N. Taylor, &quot; Guide for the Use of the International System of Units (SI)&quot;, (1995) – NIST Special
+Publication 811 - 2008 Edition [online]. Available: https://physics.nist.gov/cuu/pdf/sp811.pdf. Date accessed: 2019-02-04.</p>
+<p>[<a href="http://www.eng-lang.co.uk/ogs.htm" title="The Oxford Guide to Style">4</a>] The Oxford Guide to Style [online].
+Available: http://www.eng-lang.co.uk/ogs.htm. Date accessed: 2019-02-04.</p>
+<a class="header" href="#appendices" id="appendices"><h2>Appendices</h2></a>
+<a class="header" href="#appendix-a-lower-case-words-used-in-title-case-formatting" id="appendix-a-lower-case-words-used-in-title-case-formatting"><h3>Appendix A: Lower-case Words used in Title Case Formatting</h3></a>
+<table><thead><tr><th> Case Word    </th><th> Case Word </th><th> Case Word </th><th> Case Word  </th></tr></thead><tbody>
+<tr><td> a            </td><td> each      </td><td> less      </td><td> therefore  </td></tr>
+<tr><td> about        </td><td> either    </td><td> lesser    </td><td> these      </td></tr>
+<tr><td> above        </td><td> equal     </td><td> low       </td><td> they       </td></tr>
+<tr><td> after        </td><td> ever      </td><td> made      </td><td> this       </td></tr>
+<tr><td> against      </td><td> every     </td><td> make      </td><td> those      </td></tr>
+<tr><td> ahead        </td><td> exclude   </td><td> means     </td><td> through    </td></tr>
+<tr><td> am           </td><td> excluding </td><td> more      </td><td> throughout </td></tr>
+<tr><td> an           </td><td> follow    </td><td> most      </td><td> thus       </td></tr>
+<tr><td> and          </td><td> following </td><td> neither   </td><td> to         </td></tr>
+<tr><td> any          </td><td> follows   </td><td> next      </td><td> top        </td></tr>
+<tr><td> are          </td><td> for       </td><td> no        </td><td> towards    </td></tr>
+<tr><td> as           </td><td> from      </td><td> nor       </td><td> under      </td></tr>
+<tr><td> at           </td><td> further   </td><td> not       </td><td> up         </td></tr>
+<tr><td> be           </td><td> give      </td><td> of        </td><td> upper      </td></tr>
+<tr><td> been         </td><td> given     </td><td> on        </td><td> use        </td></tr>
+<tr><td> before       </td><td> go        </td><td> only      </td><td> use        </td></tr>
+<tr><td> behind       </td><td> good      </td><td> or        </td><td> used       </td></tr>
+<tr><td> below        </td><td> greater   </td><td> order     </td><td> used       </td></tr>
+<tr><td> beside       </td><td> had       </td><td> our       </td><td> using      </td></tr>
+<tr><td> besides      </td><td> has       </td><td> out       </td><td> versus     </td></tr>
+<tr><td> best         </td><td> have      </td><td> outer     </td><td> very       </td></tr>
+<tr><td> better       </td><td> how       </td><td> outside   </td><td> via        </td></tr>
+<tr><td> between      </td><td> however   </td><td> over      </td><td> were       </td></tr>
+<tr><td> bottom       </td><td> i.e.      </td><td> provide   </td><td> what       </td></tr>
+<tr><td> but          </td><td> in        </td><td> regard    </td><td> when       </td></tr>
+<tr><td> by           </td><td> include   </td><td> since     </td><td> where      </td></tr>
+<tr><td> can          </td><td> including </td><td> such      </td><td> which      </td></tr>
+<tr><td> consist      </td><td> inner     </td><td> than      </td><td> while      </td></tr>
+<tr><td> consistent   </td><td> inside    </td><td> that      </td><td> who        </td></tr>
+<tr><td> consistently </td><td> instead   </td><td> the       </td><td> with       </td></tr>
+<tr><td> consists     </td><td> is        </td><td> their     </td><td> within     </td></tr>
+<tr><td> does         </td><td> it        </td><td> them      </td><td> without    </td></tr>
+<tr><td> down         </td><td> its       </td><td> then      </td><td> worst      </td></tr>
+<tr><td> e.g.         </td><td> least     </td><td> there     </td><td>            </td></tr>
+</tbody></table>
+<a class="header" href="#appendix-b-tari-labs-university-terminology-conventions" id="appendix-b-tari-labs-university-terminology-conventions"><h3>Appendix B: Tari Labs University Terminology Conventions</h3></a>
+<p>With new concepts being formed daily and words changing over time, it is useful to establish terminology conventions.
+Different conventions (upper-case, lower-case, one word, two words, etc.) are used by different sources. This appendix
+contains suggested terminology for use in TLU reports.</p>
+<ul>
+<li>blockchain</li>
+<li>Mimblewimble</li>
+</ul>
+<a class="header" href="#contributors" id="contributors"><h2>Contributors</h2></a>
+<ul>
+<li><a href="https://github.com/anselld">https://github.com/anselld</a></li>
+<li><a href="https://github.com/hansieodendaal">https://github.com/hansieodendaal</a></li>
+<li><a href="https://github.com/CjS77">https://github.com/CjS77</a></li>
+<li><a href="https://github.com/kevoulee">https://github.com/kevoulee</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../labs/notes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../labs/notes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Initialize mermaid -->
+        <script src="../theme/js/mermaid.min.js" type="text/javascript" charset="utf-8"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

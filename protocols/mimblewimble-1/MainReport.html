@@ -1,0 +1,468 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tari Transactions - A simple explanation - Tari Labs University</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="A collection of learning resources for cryptocurrency">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Twitter tags -->
+        <meta name="twitter:title" content="Tari Transactions - A simple explanation - Tari Labs University" />
+        <meta name="twitter:site" content="Tari Transactions - A simple explanation - Tari Labs University"/>
+        <meta name="twitter:description" content="A collection of learning resources for cryptocurrency" />
+        <meta name="twitter:image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png" />
+        <meta name="twitter:card" content="summary"/>
+
+        <!-- Facebook tags -->
+        <meta property="og:title" content="Tari Transactions - A simple explanation - Tari Labs University" />
+        <meta property="og:site_name" content="Tari Transactions - A simple explanation - Tari Labs University"/>
+        <meta property="og:image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png" />
+        <meta property="og:description" content="A collection of learning resources for cryptocurrency" />
+
+        <!-- Generic tags -->
+        <meta itemprop="thumbnailUrl" content="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+        <meta itemprop="image" content="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+        <link rel="image_src" href="https://tlu.tarilabs.com/theme/images/tari-labs.png"/>
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+            }
+          });
+        </script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <img src="../../theme/images/tlu.png" class="tlu">
+
+            <ol class="chapter"><li class="affix"><a href="../../preface/introduction.html">Introduction</a></li><li><a href="../../cryptography/cryptography.html"><strong aria-hidden="true">1.</strong> Cryptography</a></li><li><ol class="section"><li><a href="../../cryptography/crypto-1/sources/PITCHME.link.html"><strong aria-hidden="true">1.1.</strong> Elliptic Curves 101</a></li><li><a href="../../cryptography/digital_signatures/introduction_schnorr_signatures.html"><strong aria-hidden="true">1.2.</strong> Introduction to Schnorr Signatures</a></li><li><a href="../../cryptography/scriptless-scripts/introduction-to-scriptless-scripts.html"><strong aria-hidden="true">1.3.</strong> Introduction to Scriptless Scripts</a></li><li><a href="../../cryptography/musig-schnorr-sig-scheme/The_MuSig_Schnorr_Signature_Scheme.html"><strong aria-hidden="true">1.4.</strong> The MuSig Schnorr Signature Scheme</a></li><li><a href="../../cryptography/fraud-proofs-1/MainReport.html"><strong aria-hidden="true">1.5.</strong> Fraud Proofs</a></li><li><a href="../../cryptography/bulletproofs-and-mimblewimble/MainReport.html"><strong aria-hidden="true">1.6.</strong> Bulletproofs and Mimblewimble</a></li><li><a href="../../cryptography/building-on-bulletproofs/link.html"><strong aria-hidden="true">1.7.</strong> Building on Bulletproofs</a></li><li><a href="../../cryptography/bulletproofs-protocols/MainReport.html"><strong aria-hidden="true">1.8.</strong> The Bulletproof Protocols</a></li><li><a href="../../cryptography/pure-rust-ecc/pure-rust-ecc.html"><strong aria-hidden="true">1.9.</strong> Pure-Rust Elliptic Curve Cryptography</a></li></ol></li><li><a href="../../consensus-mechanisms/consensus-mechanisms.html"><strong aria-hidden="true">2.</strong> Consensus Mechanisms</a></li><li><ol class="section"><li><a href="../../consensus-mechanisms/BFT-consensusmechanisms/sources/PITCHME.link.html"><strong aria-hidden="true">2.1.</strong> BFT Consensus Mechanisms</a></li><li><a href="../../consensus-mechanisms/BFT-consensus-mechanisms-applications/MainReport.html"><strong aria-hidden="true">2.2.</strong> Introduction to Applications of Byzantine Consensus Mechanisms</a></li></ol></li><li><a href="../../layer2scaling/layer2scaling.html"><strong aria-hidden="true">3.</strong> Layer 2 Scaling</a></li><li><ol class="section"><li><a href="../../layer2scaling/layer2scaling-landscape/layer2scaling-survey.html"><strong aria-hidden="true">3.1.</strong> Layer 2 Scaling Survey (part 1)</a></li><li><a href="../../layer2scaling/more-landscape/landscape-update.html"><strong aria-hidden="true">3.2.</strong> Layer 2 Scaling Survey (part 2)</a></li><li><a href="../../layer2scaling/executive-summary/sources/PITCHME.link.html"><strong aria-hidden="true">3.3.</strong> Layer 2 Scaling Survey Executive Summary</a></li></ol></li><li><a href="../../merged-mining/merged-mining.html"><strong aria-hidden="true">4.</strong> Merged Mining</a></li><li><ol class="section"><li><a href="../../merged-mining/merged-mining-scene/MergedMiningIntroduction.html"><strong aria-hidden="true">4.1.</strong> Merged Mining Introduction</a></li></ol></li><li><a href="../../digital-assets/digital-assets.html"><strong aria-hidden="true">5.</strong> Digital Assets</a></li><li><ol class="section"><li><a href="../../digital-assets/howey-application-to-blockchain/MainReport.html"><strong aria-hidden="true">5.1.</strong> Application of Howey to Blockchain Network Token Sales</a></li><li><a href="../../digital-assets/nft-landscape-1/sources/PITCHME.link.html"><strong aria-hidden="true">5.2.</strong> Non-fungible Tokens Survey</a></li><li><a href="../../digital-assets/confidential-assets/MainReport.html"><strong aria-hidden="true">5.3.</strong> Confidential Assets</a></li></ol></li><li><a href="../../protocols/protocols.html"><strong aria-hidden="true">6.</strong> Protocols</a></li><li><ol class="section"><li><a href="../../protocols/mimblewimble-1/sources/PITCHME.link.html"><strong aria-hidden="true">6.1.</strong> Mimblewimble Transactions (presentation)</a></li><li><a href="../../protocols/mimblewimble-1/MainReport.html" class="active"><strong aria-hidden="true">6.2.</strong> Tari Transactions - A simple explanation</a></li><li><a href="../../protocols/grin-protocol-overview/MainReport.html"><strong aria-hidden="true">6.3.</strong> Mimblewimble-Grin Block Chain Protocol Overview</a></li><li><a href="../../protocols/grin-beam-comparison/MainReport.html"><strong aria-hidden="true">6.4.</strong> Grin vs. BEAM; a Comparison</a></li><li><a href="../../protocols/grin-design-choice-criticisms/MainReport.html"><strong aria-hidden="true">6.5.</strong> Grin Design Choice Criticisms - Truth or Fiction</a></li><li><a href="../../protocols/atomic-swaps/AtomicSwaps.html"><strong aria-hidden="true">6.6.</strong> Atomic Swaps</a></li><li><a href="../../protocols/lightning-network-for-dummies/sources/PITCHME.link.html"><strong aria-hidden="true">6.7.</strong> Lightning Network for Dummies</a></li><li><a href="../../protocols/merkle-trees-and-spv-1/sources/PITCHME.link.html"><strong aria-hidden="true">6.8.</strong> Introduction to SPV, Merkle Trees and Bloom Filters</a></li><li><a href="../../protocols/rgb-introduction/sources/PITCHME.link.html"><strong aria-hidden="true">6.9.</strong> The RGB Protocol - An Introduction</a></li><li><a href="../../protocols/dht/MainReport.html"><strong aria-hidden="true">6.10.</strong> Distributed Hash Tables</a></li></ol></li><li><a href="../../labs/introduction.html"><strong aria-hidden="true">7.</strong> Labs</a></li><li><ol class="section"><li><a href="../../labs/mermaid-demo.html"><strong aria-hidden="true">7.1.</strong> Mermaid Demonstration</a></li><li><a href="../../labs/notes.html"><strong aria-hidden="true">7.2.</strong> Notes and info boxes</a></li></ol></li><li><a href="../../preface/style-guide.html"><strong aria-hidden="true">8.</strong> Style Guide</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">
+<svg width="23px" height="23px" viewBox="0 0 23 23 version="1.1" class="gem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,6.12859037 L0,12.5315952 L9.50941704,23 L23,12.5722492 L23,6.12859037 L9.56098655,0 L0,6.12859037 Z M8.37488789,18.3349536 L2.3103139,11.6575342 L2.3103139,8.02916483 L8.37488789,9.56385329 L8.37488789,18.3349536 Z M10.6748879,19.2090146 L10.6748879,10.1533363 L19.4932735,12.3893062 L10.6748879,19.2090146 Z M20.7,7.57180734 L20.7,10.3464428 L4.17713004,6.15908087 L9.74663677,2.58152894 L20.7,7.57180734 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg></h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#mimblewimble-transactions-explained" id="mimblewimble-transactions-explained"><h1>Mimblewimble transactions explained</h1></a>
+<a class="header" href="#a-high-level-overview" id="a-high-level-overview"><h2>A high-level overview</h2></a>
+<p>Mimblewimble is a privacy-oriented cryptocurrency technology. It differs from Bitcoin in some key areas:</p>
+<ul>
+<li>No addresses. The concept of Mimblewimble addresses does not exist.</li>
+<li>Completely private. Every transaction is confidential.</li>
+<li>Compact blockchain. Mimblewimble uses a different set of security guarantees to Bitcoin, which leads to a far more compact blockchain.</li>
+</ul>
+<a class="header" href="#transactions-explained" id="transactions-explained"><h1>Transactions explained</h1></a>
+<p>Confidential transactions [<a href="https://www.mycryptopedia.com/what-are-confidential-transactions/" title="Confidential transactions">1</a>] were invented by Dr. Adam Back and are employed in several cryptocurrency projects,
+including Monero and Tari - by way of Mimblewimble.</p>
+<p>Recipients of Tari create the private keys for receiving coins on the fly. Therefore they must be involved in the
+construction of a Tari transaction.</p>
+<p>This doesn't necessarily mean that recipients have to be online. But they do need to be able to communicate, whether it
+be by email, IM, or carrier pigeon.</p>
+<a class="header" href="#the-basic-transaction" id="the-basic-transaction"><h2>The basic transaction</h2></a>
+<p>We'll explain how Alice can send Tari to Bob using a two-party protocol for Mimblewimble. Multiparty transactions are
+similar, but the flow of information is a bit different and takes place over additional communication rounds.</p>
+<p>Let's say Alice has 300 µT and she wants to send 200 µT to Bob.</p>
+<p>Here’s the basic transaction:</p>
+<table><thead><tr><th align="left"> Inputs       </th><th align="left"> Outputs </th><th align="left">        </th><th align="left">     </th></tr></thead><tbody>
+<tr><td align="left"> 300          </td><td align="left"> 200     </td><td align="left"> 90     </td><td align="left"> 10  </td></tr>
+<tr><td align="left"> Alice's UTXO </td><td align="left"> To Bob  </td><td align="left"> Change </td><td align="left"> fee </td></tr>
+</tbody></table>
+<p>If we write this as a mathematical equation, where outputs are positive and inputs are negative, we should be able to
+balance things out so that there's no creation of coins out of thin air:</p>
+<p>$$ -300 + 200 + 90 + 10 = 0 $$</p>
+<p>This is basically the information that sits in the Bitcoin blockchain. Anyone can audit anyone else's transactions
+simply by inspecting the global ledger's transaction history. This isn't great for privacy.</p>
+<p>Here is where confidential transactions come in. We can start by multiplying both sides of the equation above by some
+generator point <em>H</em> on the elliptic curve (for an introduction to elliptic curve math, see
+<a href="../../cryptography/crypto-1/sources/PITCHME.link.html">this presentation</a>):</p>
+<p>$$ 300.H = 200.H + 90.H + 10.H $$</p>
+<p>Since <em>H</em> is a constant, the math above still holds, so we can validate that Alice is not stealing by checking that</p>
+<p>$$(3.H) - (2.H) - (1.H) - (f.H) \equiv 0.H = 0 $$</p>
+<p>Notice that we <em>only see public keys</em> and thus the values are hidden. Cool!</p>
+<div class="note info">
+Technically only scalar integer values are valid for elliptic curve multiplication. This is why we use µT in the
+transactions so that the amounts are always integers.
+</div>
+<p>There's a catch though. If <em>H</em> is constant and known (it is), couldn’t someone just pre-calculate $n.H$ for all
+reasonable values of <em>n</em> and scan the blockchain for those public keys?<sup><sup class="footnote-reference"><a href="#a">1</a></sup></sup></p>
+<p>In short, <em>yes</em>. so we’re not done yet.</p>
+<div class="footnote-definition" id="a"><sup class="footnote-definition-label">1</sup>
+<p>&quot;This is called a pre-image attack.&quot;</p>
+</div>
+<a class="header" href="#blinding-factors" id="blinding-factors"><h2>Blinding factors</h2></a>
+<p>To prevent a pre-image attack from un-blinding all the values in Tari transactions, we need to add randomness to each
+in- and output. The basic idea is to do this by adding a second public key to each transaction output.</p>
+<p>So what if we rewrite the inputs and outputs as follows:</p>
+<p>$$ C_i = n_i.H + k_i.G $$</p>
+<p>where <em>G</em> is another generator on the same curve.</p>
+<p>This completely <em>blinds</em> the in- and outputs so that no pre-image attack is possible. This formulation is called a
+<em>Pedersen commitment</em> [<a href="https://en.wikipedia.org/wiki/Commitment_scheme" title="Commitment Schemes">3</a>].</p>
+<div class="note warning">
+<p>The two generators, <em>H</em> and <em>G</em> must be selected in a way that it's impossible to convert values from one generator to
+the other [<a href="https://en.wikipedia.org/w/index.php?title=Nothing-up-my-sleeve_number&amp;oldid=889582749" title="Nothing-Up-My_Sleeve
+Number">2</a>]. Specifically, if <em>G</em> is the base generator, then there exists some <em>k</em> where $$ H = kG $$</p>
+<p>If anyone is able to figure out this <em>k</em>, the whole security of Confidential Transactions falls apart. It's left as an
+exercise for the reader to figure out why.</p>
+<p>For a semi-gentle introduction to these concepts, Adam Gibson's paper on the subject is excellent [<a href="https://joinmarket.me/static/FromZK2BPs_v1.pdf" title="From Zero-knowledge to BulletProofs">5</a>].</p>
+</div>
+<a class="header" href="#alice-prepares-a-transaction" id="alice-prepares-a-transaction"><h2>Alice prepares a transaction</h2></a>
+<p>Alice can now start to build a transaction.</p>
+<table><thead><tr><th> Type          </th><th> Formula                 </th><th> Name </th></tr></thead><tbody>
+<tr><td align="left"> Input         </td><td align="left"> $$ -300.H - k_1.G $$    </td><td align="left"> C1   </td></tr>
+<tr><td align="left"> Change output </td><td align="left"> $$ 90.H + k_2.G $$      </td><td align="left"> C2   </td></tr>
+<tr><td align="left"> Fee           </td><td align="left"> $$ 10.H + 0.G $$        </td><td align="left"> f    </td></tr>
+<tr><td align="left"> Total spent   </td><td align="left"> $$ 200.H + 0.G $$       </td><td align="left"> C*   </td></tr>
+<tr><td align="left"> <em>Sum</em>         </td><td align="left"> $$ 0.H + (k_2-k_1).G $$ </td><td align="left"> X    </td></tr>
+</tbody></table>
+<p>The \( k_i \)-values, \(k_1, k_2\) are the spending keys for those outputs.</p>
+<div class="note warning">
+<p>The <em>only pieces of information you need to spend Tari outputs</em> are the spending key
+(also called a blinding factor) and it's associated value.</p>
+</div>
+<p>Therefore for this transaction, Alice's wallet which tracks all of her Tari unspent outputs, would have provided the
+blinding factor and the value &quot;300&quot; to complete the commitment <em>C1</em>.</p>
+<p>Notice that when all the inputs and outputs are summed (including the fee), all the values cancel to zero; as they
+should. Notice also that the only term left is multiplied by the point <em>G</em>. All the <em>H</em> terms are gone. We call this sum
+the <em>public excess</em> for Alice's part of the transaction.</p>
+<p>We define the <em>excess</em> of the transaction to be</p>
+<p>$$ x_s = k_2 - k_1 $$</p>
+<p>A simple way for Alice to calculate her excess (and how the Tari wallet software does it) is to sum
+her output blinding factors and minus the sum of her input blinding factors.</p>
+<p>Let's say Alice was trying to create some money for herself and made the change 100 µT instead of 90. In this instance,
+the sum of the outputs and inputs would not cancel on <em>H</em> and we would have,</p>
+<p>$$X^* = 10.H + x_s.G$$</p>
+<p>We'll see in a bit how the Mimblewimble protocol catches Alice out if she tries to pull shenanigans like this.</p>
+<div class="note info">
+<p>Alice actually also prepares a Range Proof for each output, which is a proof that the value of the output is between
+zero and 2^64 µT. Without range proofs, Alice could send negative amounts to people, enriching herself, and not breaking
+any of the accounting of Tari.</p>
+</div>
+<div class="note info">
+<p>In Tari and Grin, the excess value is actually split into two values for added privacy. The Grin team has a good
+explanation of why this <code>offset</code> value is necessary [<a href="https://github.com/mimblewimble/grin/blob/master/doc/intro.md#kernel-offsets" title="Kernel Offsets">4</a>]. We leave off this step to keep the explanation simple(r).</p>
+</div>
+<p>Alice also chooses a random <em>nonce</em>,</p>
+<p>$$ r_a $$</p>
+<p>and calculates the corresponding public nonce,</p>
+<p>$$ R_a = r_a.G $$</p>
+<p>Alice then sends the following info to Bob:</p>
+<table><thead><tr><th> Field              </th><th> Value     </th></tr></thead><tbody>
+<tr><td align="left"> Inputs             </td><td align="left"> C1        </td></tr>
+<tr><td align="left"> Outputs            </td><td align="left"> C2        </td></tr>
+<tr><td align="left"> Fee                </td><td align="left"> 10        </td></tr>
+<tr><td align="left"> Amount paid to Bob </td><td align="left"> 200       </td></tr>
+<tr><td align="left"> Public nonce       </td><td align="left"> $$ R_a $$ </td></tr>
+<tr><td align="left"> Public excess      </td><td align="left"> X         </td></tr>
+<tr><td align="left"> Metadata           </td><td align="left"> m         </td></tr>
+</tbody></table>
+<p>The message metadata is some extra bits of info that pertains to the transaction (such as when the output can be spent,
+for example).</p>
+<a class="header" href="#bob-prepares-his-response" id="bob-prepares-his-response"><h2>Bob prepares his response</h2></a>
+<p>Bob receives this information and then sets about completing his part of the transaction.</p>
+<p>First he can verify that Alice has sent over the correct information by checking that the public excess, <em>X</em>, is correct
+by following the same procedure that Alice used to calculate it above. This step isn't strictly necessary since doesn't
+have enough information to detect any fraud at this point.</p>
+<p>He then builds a commitment from the <code>amount</code> field that Alice is sending him:</p>
+<p>$$ C_b = 200.H + k_b.G $$</p>
+<p>where \(k_b\) is Bob's private spend key. He calculates</p>
+<p>$$P_b = k_b.G$$</p>
+<p>and generates a range proof for the commitment.</p>
+<p>Bob then needs to sign that he's happy that everything is complete to his satisfaction. He creates a partial
+<a href="../../cryptography/digital_signatures/introduction_schnorr_signatures.html">Schnorr Signature</a> with the challenge,</p>
+<p>$$ e = H(R_a + R_b \Vert X + P_b \Vert f \Vert m) $$</p>
+<p>and the signature is given by</p>
+<p>$$ s_b = r_b + ek_b $$</p>
+<p>Bob sends back</p>
+<table><thead><tr><th> Field                               </th><th> Value   </th></tr></thead><tbody>
+<tr><td align="left"> Output (Commitment and Range Proof) </td><td align="left"> $$C_b$$ </td></tr>
+<tr><td align="left"> Public nonce                        </td><td align="left"> $$R_b$$ </td></tr>
+<tr><td align="left"> Signature                           </td><td align="left"> $$s_b$$ </td></tr>
+<tr><td align="left"> Public key                          </td><td align="left"> $$P_b$$ </td></tr>
+</tbody></table>
+<a class="header" href="#alice-completes-and-broadcasts-the-transaction" id="alice-completes-and-broadcasts-the-transaction"><h2>Alice completes and broadcasts the transaction</h2></a>
+<p>After hearing back from Bob, Alice can wrap things up.</p>
+<p>First, she can now use Bob's public nonce and public key to independently calculate the same challenge that Bob signed:</p>
+<p>$$ e = H(R_a + R_b \Vert X + P_b \Vert f \Vert m) $$</p>
+<p>Alice then creates both her own partial signature,</p>
+<p>$$ s_a = r_a + e.x_s $$</p>
+<p>and the combined aggregate signature, $$ s = s_a + s_b, R = R_a + R_b $$.</p>
+<p>Alice can now broadcast this transaction to the network. The final transaction looks as follows:</p>
+<table><thead><tr><th> Transaction Kernel   </th><th>               </th></tr></thead><tbody>
+<tr><td align="left"> Public excess        </td><td align="left"> $$ X + P_b $$ </td></tr>
+<tr><td align="left"> Signature,           </td><td align="left"> $$ (s, R) $$  </td></tr>
+<tr><td align="left"> fee                  </td><td align="left"> 10            </td></tr>
+<tr><td align="left"> Transaction metadata </td><td align="left"> m             </td></tr>
+</tbody></table>
+<table><thead><tr><th> Transaction Body          </th><th>                </th></tr></thead><tbody>
+<tr><td align="left"> Inputs with range proofs  </td><td align="left"> $$[C_1]$$      </td></tr>
+<tr><td align="left"> Outputs with range proofs </td><td align="left"> $$[C_2, C_B]$$ </td></tr>
+</tbody></table>
+<a class="header" href="#transaction-verification-and-propagation" id="transaction-verification-and-propagation"><h2>Transaction verification and propagation</h2></a>
+<p>When a full node receives Alice's transaction, it needs to verify that it's on the level before sending it on to its
+peers. The node wants to check the following:</p>
+<ul>
+<li>All inputs come from the current UTXO set,</li>
+<li>All outputs have a valid range proof,</li>
+<li>The values balance,</li>
+<li>The signature in the kernel is valid,</li>
+<li>various other consensus checks (such as, is the fee greater than the minimum)</li>
+</ul>
+<a class="header" href="#all-inputs-come-from-the-current-utxo-set" id="all-inputs-come-from-the-current-utxo-set"><h4>All inputs come from the current UTXO set</h4></a>
+<p>All full nodes keep track of the set of unspent outputs, so the node will check that <em>C1</em> is in that list.</p>
+<a class="header" href="#all-outputs-have-a-valid-range-proof" id="all-outputs-have-a-valid-range-proof"><h4>All outputs have a valid range proof</h4></a>
+<p>The range proof is verified against its matching commitment.</p>
+<a class="header" href="#the-values-balance" id="the-values-balance"><h3>The values balance</h3></a>
+<p>In this check, the node wants to make sure that no coins are created or destroyed in the transaction. But how can it do
+this if the values are blinded?</p>
+<p>Recall that in an honest transaction, all the values (which are multiplied by <em>H</em>) cancel, and you're left with the sum
+of the public keys of the outputs minus the public keys of the inputs. This non-coincidentally happens to be the same
+value that is stored in the kernel as the public excess.</p>
+<p>The summed public nonces, <em>R</em> are also stored in the kernel, so this allows the node to verify the signature by checking</p>
+<p>$$ s.G \stackrel{?}{=} R + e(X + P_b) $$</p>
+<p>where the challenge <em>e</em> is calculated as before.</p>
+<p>Therefore by validating the kernel signature, we also prove to ourselves that the transaction accounting is correct.</p>
+<p>If all these checks pass, then the node will forward the transaction onto its peers and it will eventually be mined and
+be added to the blockchain.</p>
+<a class="header" href="#stopping-fraud" id="stopping-fraud"><h2>Stopping fraud</h2></a>
+<p>Now let's say Alice tried to be sneaky and used \( X^* \) as her excess; the one where she gave herself 100 µT change
+instead of 90 µT. Now the values won't balance. The sum of outputs, inputs and fees will look something like</p>
+<p>$$ 10.H + (x_s + k_b).G $$</p>
+<p>So now when a full node checks the signature:</p>
+<p>$$
+\begin{align}
+R + e(X^* + P_b) &amp;\stackrel{?}{=} s.G  \\
+R + e(10.H + x_s.G + P_b) &amp;\stackrel{?}{=} (r_a + r_b + e(x_s + k_b)).G \\
+R + e(10.H + X + P_b) &amp;\stackrel{?}{=} (r_a + r_b).G + e(x_s + k_b).G \\
+\mathbf{10e.H} + R + e(X + P_b) &amp;\stackrel{?}{=} R + e(X + P_b) \\
+\end{align}
+$$</p>
+<p>The signature doesn't verify! The node can't tell exactly what is wrong with the transaction, but it knows something is
+up, and so it will just drop the transaction silently and get on with its life.</p>
+<a class="header" href="#transaction-summary" id="transaction-summary"><h1>Transaction summary</h1></a>
+<p>To sum up: A Tari / MimbleWimble transaction includes the following:</p>
+<ul>
+<li>From Alice, a set of inputs, that reference and spend a set of previous outputs.</li>
+<li>From Alice and Bob, a set of new outputs that include:
+<ul>
+<li>A value and a blinding factor (which is just a new private key),</li>
+<li>A range proof that shows that the value is non-negative.</li>
+</ul>
+</li>
+<li>The transaction fee, in cleartext,</li>
+<li>The public excess, which is the sum of all blinding factors used in the transaction,</li>
+<li>Transaction metadata,</li>
+<li>The excess blinding value used as the private key to sign a message attesting to the transaction metadata, and the
+public excess.</li>
+</ul>
+<a class="header" href="#references" id="references"><h1>References</h1></a>
+<p>[<a href="https://www.mycryptopedia.com/what-are-confidential-transactions/" title="Confidential transactions">1</a>]. Confidential transactions <a href="https://www.mycryptopedia.com/what-are-confidential-transactions/">https://www.mycryptopedia.com/what-are-confidential-transactions/</a> Date accessed: 9
+April 2019.</p>
+<p>[<a href="https://en.wikipedia.org/w/index.php?title=Nothing-up-my-sleeve_number&amp;oldid=889582749" title="Nothing-Up-My_Sleeve
+Number">2</a>]. Nothing-Up-My_Sleeve Numbers.
+<a href="https://en.wikipedia.org/w/index.php?title=Nothing-up-my-sleeve_number&amp;oldid=889582749">https://en.wikipedia.org/w/index.php?title=Nothing-up-my-sleeve_number&amp;oldid=889582749</a> Date accessed: 9 April 2019.</p>
+<p>[<a href="https://en.wikipedia.org/wiki/Commitment_scheme" title="Commitment Schemes">3</a>]. Commitment schemes, Wikipedia. <a href="https://en.wikipedia.org/wiki/Commitment_scheme">https://en.wikipedia.org/wiki/Commitment_scheme</a>. Date accessed: 9 April 2019.</p>
+<p>[<a href="https://github.com/mimblewimble/grin/blob/master/doc/intro.md#kernel-offsets" title="Kernel Offsets">4</a>]. Kernel Offsets, in Introduction to MimbleWimble and Grin,
+<a href="https://github.com/mimblewimble/grin/blob/master/doc/intro.md#kernel-offsets">https://github.com/mimblewimble/grin/blob/master/doc/intro.md#kernel-offsets</a>, Accessed: 9 April 2019.</p>
+<p>[<a href="https://joinmarket.me/static/FromZK2BPs_v1.pdf" title="From Zero-knowledge to BulletProofs">5</a>]: A. Gibson, &quot;From Zero-knowledge to BulletProofs&quot;, https://joinmarket.me/static/FromZK2BPs_v1.pdf. Date accessed:
+10 April 2019</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../protocols/mimblewimble-1/sources/PITCHME.link.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../protocols/grin-protocol-overview/MainReport.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../protocols/mimblewimble-1/sources/PITCHME.link.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../protocols/grin-protocol-overview/MainReport.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Initialize mermaid -->
+        <script src="../../theme/js/mermaid.min.js" type="text/javascript" charset="utf-8"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
